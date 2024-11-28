@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <meta property="og:title" content="Isis | Asistente de Voz" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/IgnacioPrados/IsisVoiceAssistant/master/favicon.png" />
+    <meta property="og:description" content="Isis es una Asistente de Voz Virtual creada por Ignacio Prados." />
+    <title>Isis | Asistente de Voz</title>
+    <link rel="icon" href="/static/images/favicon.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="/media/fondo1.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="intro">
+        <h1 class="amar">Soy Isis, habla conmigo!</h1>
+        <p class="info">Pedime que te cuente algo interesante, un chiste, que te diga la hora, o que busque algo en internet.</p>
+    </div>
+
+    <a class="button" role="button"></a>
+
+    <div class="card2">
+        Activa el Micrófono y di algo.
+    </div>
+
+    <div class="card"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
+
