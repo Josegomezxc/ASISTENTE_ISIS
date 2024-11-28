@@ -15,8 +15,8 @@ if (typeof SpeechRecognition === "undefined") {
 	result.innerHTML = "<b>Lo siento, tu navegador no soporta Speech API. Para usar a Isis, descarga la última versión de Google Chrome.<b>";
 } else {
 	const recognition = new SpeechRecognition();
-	recognition.continuous = false;
-	recognition.interimResults = false;
+	recognition.continuous = true;
+	recognition.interimResults = true;
     recognition.lang = 'es-AR';
 	recognition.onresult = event => {
 		const last = event.results.length - 1;
@@ -150,7 +150,11 @@ function process(rawText) {
 	}
 
 	else if (text.includes("oye isis") || text.includes("isis")) {
-		response = 'Hola, en que puedo ayudarte hoy'; toggleBtn();
+		response = 'Hola Señor, estoy aquí'; toggleBtn();
+	}
+
+	else if (text.includes("comandos") || text.includes("tus comandos")) {
+		response = 'mis comandos son: '; toggleBtn();
 	}
 
 	else if (text.includes("haces") || text.includes("haciendo") || text.includes("estáshaciendo")) {
@@ -334,7 +338,6 @@ function process(rawText) {
 		toggleBtn();
 
 	}
-	
 
 	else if (!response) {
 		nose = [
@@ -350,4 +353,33 @@ function process(rawText) {
 }
 
 
-  
+const showCommands = document.getElementById('showCommands');
+const commandsPopup = document.getElementById('commandsPopup');
+const closePopup = document.getElementById('closePopup');
+
+showCommands.addEventListener('click', () => {
+	commandsPopup.style.display = 'block';
+});
+
+closePopup.addEventListener('click', () => {
+	commandsPopup.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+	if (e.target === commandsPopup) {
+		commandsPopup.style.display = 'none';
+	}
+});
+
+document.getElementById('showMore').addEventListener('click', function() {
+	var listContainer = document.querySelector('.commands-list-container');
+	var showMoreButton = document.getElementById('showMore');
+	
+	if (listContainer.style.maxHeight === 'none') {
+		listContainer.style.maxHeight = '200px'; 
+		showMoreButton.innerText = '↓ Ver más';
+	} else {
+		listContainer.style.maxHeight = 'none'; 
+		showMoreButton.innerText = '↑ Ver menos';
+	}
+});
