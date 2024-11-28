@@ -15,8 +15,8 @@ if (typeof SpeechRecognition === "undefined") {
 	result.innerHTML = "<b>Lo siento, tu navegador no soporta Speech API. Para usar a Isis, descarga la última versión de Google Chrome.<b>";
 } else {
 	const recognition = new SpeechRecognition();
-	recognition.continuous = true;
-	recognition.interimResults = true;
+	recognition.continuous = false;
+	recognition.interimResults = false;
     recognition.lang = 'es-AR';
 	recognition.onresult = event => {
 		const last = event.results.length - 1;
@@ -304,35 +304,14 @@ function process(rawText) {
 	
 	else if (text.toLowerCase().includes("facebook") || text.toLowerCase().includes("en facebook")) {
 		const lowerCaseText = rawText.toLowerCase();
+
 		const searchQuery = lowerCaseText.replace(/(busca en facebook|facebook|en facebook|quiero que busques en facebook)/i, "").trim();
-	
-		// Verificar si el dispositivo es móvil
-		function isMobile() {
-			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-		}
-	
-		if (isMobile()) {
-			// Abrir en la app de Facebook en dispositivos móviles
-			const facebookAppUrl = `fb://search?q=${encodeURIComponent(searchQuery)}`;
-			const fallbackUrl = `https://www.facebook.com/search/top/?q=${encodeURIComponent(searchQuery)}`;
-	
-			// Intentar abrir la app de Facebook
-			window.location.href = facebookAppUrl;
-	
-			// Dar un mensaje informativo
-			response = `He intentado abrir la búsqueda sobre "${searchQuery}" en la app de Facebook. Si no tienes la app instalada, se abrirá en el navegador.`;
-			
-			// Esperar un breve tiempo antes de redirigir al fallback en caso de error
-			setTimeout(() => {
-				window.location.href = fallbackUrl;
-			}, 2000);
-		} else {
-			// En computadoras, abrir en navegador
-			const facebookUrl = `https://www.facebook.com/search/top/?q=${encodeURIComponent(searchQuery)}`;
-			window.open(facebookUrl, "_blank");
-			response = `He abierto Facebook y busqué sobre "${searchQuery}".`;
-		}
-	
+		
+		const facebookUrl = `https://www.facebook.com/search/top/?q=${encodeURIComponent(searchQuery)}`;
+		
+		window.open(facebookUrl, "_blank");
+		
+		response = `He abierto Facebook y busqué sobre "${searchQuery}".`; 
 		toggleBtn();
 	}
 	
