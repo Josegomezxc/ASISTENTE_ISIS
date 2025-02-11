@@ -281,10 +281,8 @@ function process(rawText) {
 					const videoId = data.items[0].id.videoId;
 	
 					const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-	
 					window.open(videoUrl, "_blank");
-	
-					toggleBtn();
+					toggleBtn();	
 				} else {
 					const contador=2
 					toggleBtn();
