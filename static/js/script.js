@@ -294,8 +294,62 @@ function process(rawText) {
 				const contador=3
 				toggleBtn();
 			});
+			Frases_music = [
+				"Y ahora prepárate, porque lo que viene es pura magia para tus oídos. Sube el volumen, deja que el ritmo te atrape y sigue disfrutando de esta sesión llena de energía.",
+				"Hemos recorrido un viaje increíble con esta última canción, pero esto no se detiene. Agarra aire, ponte cómodo y déjate llevar por el siguiente temazo que está por hacerte vibrar.",
+				"Dicen que la música es el lenguaje universal, y aquí te traigo una canción que habla directamente a tu alma. Relájate, siente cada nota y deja que el sonido haga su magia.",
+				"Si creías que esto ya estaba en su punto máximo, prepárate… porque lo que sigue va a elevar la energía aún más. ¡Sube el volumen y déjate llevar!",
+				"Cada canción es un viaje, y estamos a punto de despegar hacia un nuevo destino sonoro. ¿Listo para esta experiencia? Respira profundo, cierra los ojos y siente la música.",
+				"La buena música nunca se detiene, y en esta playlist siempre hay espacio para más emociones. Así que relájate, porque lo que viene ahora es pura vibra positiva.",
+				"Así como en la vida, en la música cada cambio es una nueva oportunidad de sentir, de bailar, de emocionarse. Ahora déjate llevar, porque este siguiente track llega directo al corazón.",
+				"No importa el día, la hora o el lugar… la música siempre es el mejor acompañante. Y lo que sigue es simplemente espectacular.",
+				"El ritmo no se detiene y la energía sigue subiendo. Así que prepárate, porque lo que suena ahora es un himno de la buena vibra.",
+				"Cierra los ojos, siente el ritmo y deja que la música haga lo suyo. El siguiente tema está listo para transportarte a otro mundo.",
+				"¿Listo para otro nivel? Porque lo que viene ahora te hará mover la cabeza y sentir cada acorde en el alma. ¡Vamos con todo!",
+				"No le bajes, que lo mejor está por comenzar. Lo que sigue es pura explosión musical. ¡Dale play a la emoción!",
+				"Cambio de ritmo, pero no de actitud. La música sigue fluyendo y la fiesta continúa sin frenos.",
+				"Esta playlist es un viaje y ahora nos dirigimos a un nuevo destino sonoro. Relájate y disfruta de la siguiente parada.",
+				"Sube el volumen y deja que esta canción te envuelva. La magia de la música está en cada nota, en cada latido.",
+				"Cada canción cuenta una historia, y la que sigue te hará sentir cada palabra, cada melodía. ¡Escúchala con el corazón!",
+				"No hay mejor momento que este para dejarse llevar por la música. Lo que viene es pura inspiración hecha sonido.",
+				"Dale una oportunidad a lo inesperado. Este track puede ser tu nueva obsesión musical. ¡Escúchalo y descúbrelo!",
+				"Que el ritmo no pare, porque esto apenas comienza. Lo que sigue te hará moverte sin que te des cuenta.",
+				"Baja las luces, sube el volumen y siente cómo la música te lleva a otro nivel. Este tema es simplemente otro mundo.",
+				"Es momento de darle un giro a la energía. Cambiamos el ritmo, pero mantenemos la pasión por la música.",
+				"La música es como un océano, con olas de emociones y sonidos. Déjate llevar por esta nueva ola que llega con todo.",
+				"No hay pausa para los buenos sonidos. Lo que sigue es otra joya musical que tienes que escuchar.",
+				"Respira hondo, siente el ritmo y deja que la música haga su magia. La siguiente canción tiene algo especial para ti.",
+				"Los mejores momentos tienen banda sonora, y esta canción está aquí para hacer de este instante algo inolvidable.",
+				"Un viaje musical está compuesto de sorpresas, emociones y descubrimientos. Y ahora es momento de descubrir el siguiente gran tema.",
+				"El cambio es parte de la vida… y de la música. Así que prepárate, porque este giro te va a sorprender.",
+				"Nada como una buena canción para cambiar el ambiente. Disfruta de este nuevo sonido que está por arrancar.",
+				"Las emociones están en el aire y esta canción viene a intensificarlas. Cierra los ojos, siente y disfruta.",
+				"Un beat, un bajo, una melodía… y la magia sucede. Escucha atentamente porque este tema tiene algo especial.",
+				"Si te gustó lo que acabamos de escuchar, espera a lo que sigue. ¡Es otro nivel de sonido!",
+				"La música nunca se detiene, y en este espacio siempre hay lugar para más ritmo, más emociones y más vibras.",
+				"Pausa lo que estés haciendo por un segundo y ponle atención a este temazo. Lo que viene a continuación es pura magia.",
+				"Siempre hay una canción perfecta para cada momento, y esta que viene puede ser la tuya. Dale play y descúbrelo.",
+				"Cada acorde, cada sonido, cada letra tiene su historia. Ahora es momento de escuchar la siguiente gran historia en esta lista.",
+				"El soundtrack de tu día sigue sonando y este siguiente track puede ser tu nuevo favorito.",
+				"No importa cómo estés, la música siempre tiene algo para ti. Esta próxima canción es justo lo que necesitas ahora.",
+				"La combinación perfecta entre ritmo y emoción está en esta siguiente canción. ¿Listo para disfrutarla?",
+				"Cuando crees que ya escuchaste lo mejor, llega una nueva melodía para sorprenderte. Vamos con la siguiente joya musical.",
+				"Respira, siente, disfruta… la música nos conecta y este track que viene lo hace de una manera increíble.",
+				"Sube el volumen, déjate llevar y que la música haga lo suyo. Lo que sigue es simplemente una obra de arte.",
+				"La mejor manera de disfrutar el momento es con una buena canción. Y aquí viene la siguiente dosis de energía musical.",
+				"No dejes que el ritmo se apague, porque lo que sigue es puro fuego. ¡Prepárate para sentirlo!",
+				"La magia de la música es que nunca deja de sorprendernos. Este próximo track es prueba de ello.",
+				"Si pensabas que ya lo habías escuchado todo, espera a lo que viene. ¡Dale play y descúbrelo!",
+				"Cambiamos la energía, pero mantenemos la esencia. Esta nueva canción llega para llevarte a otro lugar.",
+				"La música nos hace viajar sin movernos del sitio. Así que relájate y disfruta de este nuevo destino sonoro.",
+				"Los mejores momentos de la vida tienen un gran fondo musical. Y este próximo tema es digno de recordar.",
+				"La emoción sigue subiendo, el ritmo no se detiene y la mejor música sigue sonando. Vamos con la siguiente joya.",
+				"No importa la hora ni el lugar, la música siempre es la mejor compañía. ¡Disfruta de lo que viene!",
+				"Sigue la vibra, siente el ritmo y deja que la música fluya. Este track está listo para atraparte.",
+			];
+			
 		if (contador=1){
-			response = `Reproduciendo "${videoQuery}" en YouTube.`;
+			response = Frases_music[Math.floor(Math.random() * Frases_music.length)]; toggleBtn();
 		}
 		else if (contador=2){
 			response = `No encontré ningún video relacionado con "${videoQuery}".`;
@@ -309,7 +363,7 @@ function process(rawText) {
 	else if (text.toLowerCase().includes("facebook") || text.toLowerCase().includes("en facebook")) {
 		const lowerCaseText = rawText.toLowerCase();
 
-		const searchQuery = lowerCaseText.replace(/(busca en facebook|facebook|en facebook|quiero que busques en facebook)/i, "").trim();
+		const searchQuery = lowerCaseText.replace(/(facebook|en facebook|quiero que busques en facebook)/i, "").trim();
 		
 		const facebookUrl = `https://www.facebook.com/search/top/?q=${encodeURIComponent(searchQuery)}`;
 		
@@ -353,6 +407,7 @@ function process(rawText) {
 }
 
 
+// Mostrar y ocultar el popup de comandos
 const showCommands = document.getElementById('showCommands');
 const commandsPopup = document.getElementById('commandsPopup');
 const closePopup = document.getElementById('closePopup');
@@ -365,21 +420,9 @@ closePopup.addEventListener('click', () => {
 	commandsPopup.style.display = 'none';
 });
 
+// Cerrar popup al hacer clic fuera de él
 window.addEventListener('click', (e) => {
 	if (e.target === commandsPopup) {
 		commandsPopup.style.display = 'none';
-	}
-});
-
-document.getElementById('showMore').addEventListener('click', function() {
-	var listContainer = document.querySelector('.commands-list-container');
-	var showMoreButton = document.getElementById('showMore');
-	
-	if (listContainer.style.maxHeight === 'none') {
-		listContainer.style.maxHeight = '200px'; 
-		showMoreButton.innerText = '↓ Ver más';
-	} else {
-		listContainer.style.maxHeight = 'none'; 
-		showMoreButton.innerText = '↑ Ver menos';
 	}
 });
