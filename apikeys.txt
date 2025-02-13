@@ -1,5 +1,0 @@
-API_KEY = "sk_ff74d1213bcc17e82aa80c247b127fcea50b11c1657226d3"
-
-VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
-
-youtube  apiKey = "AIzaSyAAbkdJLdFLerDtBwa5I9WjNn6bjaA37Ro"; 
