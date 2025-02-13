@@ -4,7 +4,7 @@ const micIcon = document.getElementById("micIcon");
 const soundFrequency = document.getElementById("sound-frequency");
 const wave = document.getElementById("wave");
 
-const ELEVEN_LABS_API_KEY = "sk_ff74d1213bcc17e82aa80c247b127fcea50b11c1657226d3";
+const ELEVEN_LABS_API_KEY = "sk_2fd3636d4303d58512ef7cad5517836031994e67817e47a1";
 const ELEVEN_LABS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM";
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
