@@ -4,7 +4,7 @@ const micIcon = document.getElementById("micIcon");
 const soundFrequency = document.getElementById("sound-frequency");
 const wave = document.getElementById("wave");
 
-const ELEVEN_LABS_API_KEY = "sk_2fd3636d4303d58512ef7cad5517836031994e67817e47a1";
+const ELEVEN_LABS_API_KEY = "sk_ac42b0a10dee9d63b633427a29502af777436dd7709db08f";
 const ELEVEN_LABS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM";
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -303,63 +303,67 @@ async function speakWithAria(text) {
 
         else if (text.includes("reproduce") || text.includes("reproducir")) {
             const videoQuery = text.replace(/reproduce|reproducir/i, "").trim();
-        
+            
             const apiKey = "AIzaSyAAbkdJLdFLerDtBwa5I9WjNn6bjaA37Ro"; 
             const youtubeSearchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(videoQuery)}&type=video&key=${apiKey}`;
-        
+            
             const frasesDJ = [
-                "Y ahora prepárate, porque lo que viene es pura magia para tus oídos. Sube el volumen, deja que el ritmo te atrape y sigue disfrutando de esta sesión llena de energía.",
-				"Hemos recorrido un viaje increíble con esta última canción, pero esto no se detiene. Agarra aire, ponte cómodo y déjate llevar por el siguiente temazo que está por hacerte vibrar.",
-				"Dicen que la música es el lenguaje universal, y aquí te traigo una canción que habla directamente a tu alma. Relájate, siente cada nota y deja que el sonido haga su magia.",
-				"Si creías que esto ya estaba en su punto máximo, prepárate… porque lo que sigue va a elevar la energía aún más. ¡Sube el volumen y déjate llevar!",
-				"Cada canción es un viaje, y estamos a punto de despegar hacia un nuevo destino sonoro. ¿Listo para esta experiencia? Respira profundo, cierra los ojos y siente la música.",
-				"La buena música nunca se detiene, y en esta playlist siempre hay espacio para más emociones. Así que relájate, porque lo que viene ahora es pura vibra positiva.",
-				"Así como en la vida, en la música cada cambio es una nueva oportunidad de sentir, de bailar, de emocionarse. Ahora déjate llevar, porque este siguiente track llega directo al corazón.",
-				"No importa el día, la hora o el lugar… la música siempre es el mejor acompañante. Y lo que sigue es simplemente espectacular.",
-				"El ritmo no se detiene y la energía sigue subiendo. Así que prepárate, porque lo que suena ahora es un himno de la buena vibra.",
-				"Cierra los ojos, siente el ritmo y deja que la música haga lo suyo. El siguiente tema está listo para transportarte a otro mundo.",
-				"¿Listo para otro nivel? Porque lo que viene ahora te hará mover la cabeza y sentir cada acorde en el alma. ¡Vamos con todo!",
-				"No le bajes, que lo mejor está por comenzar. Lo que sigue es pura explosión musical. ¡Dale play a la emoción!",
-				"Cambio de ritmo, pero no de actitud. La música sigue fluyendo y la fiesta continúa sin frenos.",
-				"Esta playlist es un viaje y ahora nos dirigimos a un nuevo destino sonoro. Relájate y disfruta de la siguiente parada.",
-				"Sube el volumen y deja que esta canción te envuelva. La magia de la música está en cada nota, en cada latido.",
-				"Cada canción cuenta una historia, y la que sigue te hará sentir cada palabra, cada melodía. ¡Escúchala con el corazón!",
-				"No hay mejor momento que este para dejarse llevar por la música. Lo que viene es pura inspiración hecha sonido.",
-				"Dale una oportunidad a lo inesperado. Este track puede ser tu nueva obsesión musical. ¡Escúchalo y descúbrelo!",
-				"Que el ritmo no pare, porque esto apenas comienza. Lo que sigue te hará moverte sin que te des cuenta.",
-				"Baja las luces, sube el volumen y siente cómo la música te lleva a otro nivel. Este tema es simplemente otro mundo.",
-				"Es momento de darle un giro a la energía. Cambiamos el ritmo, pero mantenemos la pasión por la música.",
-				"La música es como un océano, con olas de emociones y sonidos. Déjate llevar por esta nueva ola que llega con todo.",
-				"No hay pausa para los buenos sonidos. Lo que sigue es otra joya musical que tienes que escuchar.",
-				"Respira hondo, siente el ritmo y deja que la música haga su magia. La siguiente canción tiene algo especial para ti.",
-				"Los mejores momentos tienen banda sonora, y esta canción está aquí para hacer de este instante algo inolvidable.",
-				"Un viaje musical está compuesto de sorpresas, emociones y descubrimientos. Y ahora es momento de descubrir el siguiente gran tema.",
-				"El cambio es parte de la vida… y de la música. Así que prepárate, porque este giro te va a sorprender.",
-				"Nada como una buena canción para cambiar el ambiente. Disfruta de este nuevo sonido que está por arrancar.",
-				"Las emociones están en el aire y esta canción viene a intensificarlas. Cierra los ojos, siente y disfruta.",
-				"Un beat, un bajo, una melodía… y la magia sucede. Escucha atentamente porque este tema tiene algo especial.",
-				"Si te gustó lo que acabamos de escuchar, espera a lo que sigue. ¡Es otro nivel de sonido!",
-				"La música nunca se detiene, y en este espacio siempre hay lugar para más ritmo, más emociones y más vibras.",
-				"Pausa lo que estés haciendo por un segundo y ponle atención a este temazo. Lo que viene a continuación es pura magia.",
-				"Siempre hay una canción perfecta para cada momento, y esta que viene puede ser la tuya. Dale play y descúbrelo.",
-				"Cada acorde, cada sonido, cada letra tiene su historia. Ahora es momento de escuchar la siguiente gran historia en esta lista.",
-				"El soundtrack de tu día sigue sonando y este siguiente track puede ser tu nuevo favorito.",
-				"No importa cómo estés, la música siempre tiene algo para ti. Esta próxima canción es justo lo que necesitas ahora.",
-				"La combinación perfecta entre ritmo y emoción está en esta siguiente canción. ¿Listo para disfrutarla?",
-				"Cuando crees que ya escuchaste lo mejor, llega una nueva melodía para sorprenderte. Vamos con la siguiente joya musical.",
-				"Respira, siente, disfruta… la música nos conecta y este track que viene lo hace de una manera increíble.",
-				"Sube el volumen, déjate llevar y que la música haga lo suyo. Lo que sigue es simplemente una obra de arte.",
-				"La mejor manera de disfrutar el momento es con una buena canción. Y aquí viene la siguiente dosis de energía musical.",
-				"No dejes que el ritmo se apague, porque lo que sigue es puro fuego. ¡Prepárate para sentirlo!",
-				"La magia de la música es que nunca deja de sorprendernos. Este próximo track es prueba de ello.",
-				"Si pensabas que ya lo habías escuchado todo, espera a lo que viene. ¡Dale play y descúbrelo!",
-				"Cambiamos la energía, pero mantenemos la esencia. Esta nueva canción llega para llevarte a otro lugar.",
-				"La música nos hace viajar sin movernos del sitio. Así que relájate y disfruta de este nuevo destino sonoro.",
-				"Los mejores momentos de la vida tienen un gran fondo musical. Y este próximo tema es digno de recordar.",
-				"La emoción sigue subiendo, el ritmo no se detiene y la mejor música sigue sonando. Vamos con la siguiente joya.",
-				"No importa la hora ni el lugar, la música siempre es la mejor compañía. ¡Disfruta de lo que viene!",
-				"Sigue la vibra, siente el ritmo y deja que la música fluya. Este track está listo para atraparte.",
+                                `¡Hey! Hoy arrancamos con algo especial, pensado solo para ti. La primera melodía que va a sonar es ${videoQuery}.`,
+                                "¡Qué bueno ver que este tipo de música te gusta! ¡Sigamos disfrutando juntos!",
+                
+                                `Escucha esto... Un inicio perfecto para el set de hoy. Deja que ${videoQuery} marque el ritmo.`,
+                                "Parece que estás disfrutando de estas canciones. ¡Me encanta esa energía!",
+                
+                                `Atención, amantes de la buena música. Vamos a empezar con una canción que encaja a la perfección con el vibe de hoy, y esa es ${videoQuery}.`,
+                                "Veo que te encanta este ritmo, ¿verdad? ¡Vamos a seguir así!",
+                
+                                `Aquí viene algo increíble. Este track es el inicio de un viaje sonoro que no querrás perderte, ${videoQuery}.`,
+                                "Es genial notar que estas melodías resuenan contigo. ¡A seguir disfrutando!",
+                
+                                `Elige un buen lugar y prepárate. El primer tema del set te va a encantar. Escucha, ${videoQuery}.`,
+                                "Te veo con buen gusto musical. ¡Esto se va a poner aún mejor!",
+                
+                                `Dale play a este momento. Para empezar con la mejor energía, aquí está ${videoQuery}.`,
+                                "Este estilo realmente parece gustarte. ¡Vamos a hacer que suene más!",
+                
+                                `Cierra los ojos, siente el ritmo. Esta canción es perfecta para arrancar el set de hoy. ${videoQuery}.`,
+                                "Parece que tienes buen gusto por estas canciones. ¡Vamos a seguir disfrutando de la música que amas!",
+                
+                                `Es hora de sumergirse en la música. Vamos a empezar con ${videoQuery}, un track que encaja a la perfección.`,
+                                "Me parece que este tipo de melodías resuena contigo. ¡Sigamos con más de lo que te gusta!",
+                
+                                `El primer sonido de la noche está aquí. Disfruta de ${videoQuery} y deja que fluya.`,
+                                "Es evidente que disfrutas de este ritmo. ¡Qué genial poder compartirlo contigo!",
+                
+                                `Siente cómo empieza a tomar forma. Para dar inicio a este viaje musical, escucha ${videoQuery}.`,
+                                "Veo que te sientes conectado con este estilo musical. ¡Es perfecto para mantener la energía alta!",
+                
+                                `Nada mejor para arrancar que esto. Déjate llevar por los primeros acordes de ${videoQuery}.`,
+                                "¡Se nota que te gusta este ritmo! ¡Sigamos con la buena música!",
+                
+                                `Todo empieza con una nota... Y en este caso, la primera es de ${videoQuery}.`,
+                                "Te veo disfrutando de estas canciones. ¡Vamos a hacer que esta experiencia musical sea aún mejor!"
+                            ];  
+        
+            const endFrases = [
+                "Hemos llegado al cierre de nuestro primer sonido. Te has sumergido en el universo de [nombre del artista]. Ahora, preparemos nuestros oídos para una nueva aventura musical: ¡deja que [nuevo artista] nos lleve a un viaje en este [día de hoy]!",
+
+                "Estabas oyendo un tema de **[nombre del artista]**. El siguiente tiene canciones que me suenan bastante a ti. Vamos a escuchar algo de **[nuevo artista]** y más de esa música que siempre pones cada **[día de hoy]**.",
+
+                "El primer tema ha tomado su último suspiro. Has disfrutado de los ecos de [nombre del artista]. Ahora, es el momento de una sorpresa sonora: ¡descubramos juntos a [nuevo artista] en este hermoso [día de hoy]!",
+
+                "El primer tema ha puesto su broche final. Te has dejado llevar por la magia de [nombre del artista]. Ahora, abramos el telón a lo nuevo: ¡dejemos que [nuevo artista] nos sorprenda en este singular [día de hoy]!",
+
+                "Has estado disfrutando de un gran tema de **[nombre del artista]**. Ahora, prepárate para algo diferente: ¡es el momento de **[nuevo artista]**! Ideal para acompañar este **[día de hoy]**.",
+
+                "Hemos llegado al final del primer acto musical. Has estado encantado con las notas de [nombre del artista]. Ahora, cambiaremos el guion: ¡es momento de disfrutar a [nuevo artista] en este emocionante [día de hoy]!",
+
+                "El primer tema ha dejado su huella. Te has perdido en el ritmo de [nombre del artista]. Ahora, ¡es tiempo de dar un giro inesperado! Vamos a descubrir a [nuevo artista] en este extraordinario [día de hoy].",
+
+                "El primer tema ha escrito su último acorde. Has vibrado con el arte de [nombre del artista]. Ahora, es el momento de un nuevo capítulo: ¡déjate llevar por [nuevo artista] en este fascinante [día de hoy]!"
             ];
+        
+            let availableFrases = [...frasesDJ];
         
             fetch(youtubeSearchUrl)
                 .then(response => response.json())
@@ -367,14 +371,55 @@ async function speakWithAria(text) {
                     if (data.items && data.items.length > 0) {
                         const videoId = data.items[0].id.videoId;
                         const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+                        
+                        if (availableFrases.length === 0) {
+                            availableFrases = [...frasesDJ];
+                        }
+                        
+                        const randomIndex = Math.floor(Math.random() * availableFrases.length);
+                        const frase = availableFrases[randomIndex];
         
-                        const frase = frasesDJ[Math.floor(Math.random() * frasesDJ.length)];
+                        availableFrases.splice(randomIndex, 1);
+                        
                         await speakWithAria(frase);
-                        setTimeout(() => {
-                            window.open(videoUrl, "_blank");
-                        }, frase.length * 43);
                         toggleListening();
-                        return
+        
+                        // Abre el video
+                        window.open(videoUrl, "_blank");
+        
+                        // Obtener el nombre del artista
+                        const artistName = data.items[0].snippet.channelTitle; // Nombre del artista
+                        const today = new Date().toLocaleDateString('es-ES', { weekday: 'long' }); // Día de la semana en español
+        
+                        // Reemplaza los marcadores en la frase final
+                        const nuevoArtist = "esta nueva canción"; // Asegúrate de definir este artista correctamente
+                        const endPhrase = endFrases[Math.floor(Math.random() * endFrases.length)]
+                            .replace("[nombre del artista]", artistName)
+                            .replace("[nuevo artista]", nuevoArtist)
+                            .replace("[día de hoy]", today);
+        
+                        // Obtener duración del video
+                        const videoDetailsUrl = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoId}&key=${apiKey}`;
+                        const videoDetailsResponse = await fetch(videoDetailsUrl);
+                        const videoDetailsData = await videoDetailsResponse.json();
+        
+                        if (videoDetailsData.items && videoDetailsData.items.length > 0) {
+                            const duration = videoDetailsData.items[0].contentDetails.duration; // Formato ISO 8601
+                            const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+                            const hours = (match[1] ? parseInt(match[1]) : 0) * 3600;
+                            const minutes = (match[2] ? parseInt(match[2]) : 0) * 60;
+                            const seconds = (match[3] ? parseInt(match[3]) : 0);
+                            const totalSeconds = hours + minutes + seconds;
+        
+                            // Establecer el temporizador para la frase al finalizar
+                            setTimeout(async () => {
+                                await speakWithAria(endPhrase);
+                            }, totalSeconds * 1000); // Convertir a milisegundos
+                        } else {
+                            console.error("No se encontró la duración del video.");
+                        }
+                        
+                        return;
                     } else {
                         await speakWithAria(`No encontré ningún video relacionado con "${videoQuery}".`);
                     }
@@ -383,9 +428,11 @@ async function speakWithAria(text) {
                     console.error("Error al buscar el video:", error);
                     await speakWithAria("Ups, hubo un problema al buscar el video. Inténtalo de nuevo.");
                 });
-        
             return;
         }
+        
+        
+        
         
         else if (text.includes("facebook")) {
             const searchQuery = rawText.replace(/facebook|en facebook|quiero que busques en facebook/i, "").trim();
