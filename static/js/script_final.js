@@ -431,6 +431,25 @@ async function speakWithAria(text) {
             return;
         }
         
+        // else if (text.includes("discord")) {
+        //     const message = rawText.replace(/discord|en discord|quiero que envíes a discord/i, "").trim();
+        //     const webhookURL = "https://discord.com/api/webhooks/1346333216956743800/GUAbSqPC-0n3-5HpgEPfrtVzLY7gYe1cxwo4wuR4g0f_fL5Tn-DnToWFSRxiz10nzQaD";
+        
+        //     fetch(webhookURL, {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify({ content: `m!play https://www.youtube.com/watch?v=KlQOoKOblpE` })
+        //     })
+        //     .then(() => {
+        //         response = `He enviado el mensaje "${message}" a Discord.`;
+        //         toggleListening();
+        //     })
+        //     .catch(() => {
+        //         response = "Hubo un error al enviar el mensaje a Discord.";
+        //         toggleListening();
+        //     });
+        // }
+        
         
         
         
